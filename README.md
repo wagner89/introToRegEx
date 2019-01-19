@@ -39,14 +39,14 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
      ```
      
    b. When the regular expression is costly
-   Example: check if a string is lowercase
-   
-   ```
-   var isLowercase = myString === myString.toLowerCase();
-   ```
+     Example: check if a string is lowercase
 
-   instead of
+     ```
+     var isLowercase = myString === myString.toLowerCase();
+     ```
 
-   ```
-   var isLowercase = /^[a-z]*$/.test(myString);
-   ```
+     instead of
+
+     ```
+     var isLowercase = /^[a-z]*$/.test(myString);
+     ```
