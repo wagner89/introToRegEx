@@ -27,6 +27,7 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
   a. When there is a more readable solution
      Example: check if a string is lowercase
+     
      ```
      var isLowercase = myString === myString.toLowerCase();
      ```
@@ -39,6 +40,7 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
      
    b. When the regular expression is costly
    Example: check if a string is lowercase
+   
    ```
    var isLowercase = myString === myString.toLowerCase();
    ```
