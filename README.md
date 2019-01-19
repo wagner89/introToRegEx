@@ -10,9 +10,6 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 1. What is a Regular Expression
 
-
-
-
 2. What is a RegEx good for
 3. Fundamentals
 4. Groups
@@ -25,20 +22,24 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 9. When not to use RegEx
 
-  a. When there is a more readable solution
-     Example: check if a string is lowercase
+a. When there is a more readable solution
+   Example: check if a string is lowercase
 
-     `var isLowercase = myString === myString.toLowerCase();`
+   `var isLowercase = myString === myString.toLowerCase();`
 
-     instead of
 
-     `var isLowercase = /^[a-z]*$/.test(myString);`
+   instead of
+
+
+   `var isLowercase = /^[a-z]*$/.test(myString);`
      
-   b. When the regular expression is costly
-     Example: check if a string is lowercase
+b. When the regular expression is costly
+   Example: check if a string is lowercase
 
-     `var isLowercase = myString === myString.toLowerCase();`
+   `var isLowercase = myString === myString.toLowerCase();`
 
-     instead of
 
-     `var isLowercase = /^[a-z]*$/.test(myString);`
+   instead of
+
+
+   `var isLowercase = /^[a-z]*$/.test(myString);`
