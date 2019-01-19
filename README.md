@@ -4,7 +4,7 @@
 Some people, when confronted with a problem, think 
 “I know, I’ll use regular expressions.” Now they have two problems.
 ``` 
-source - Stack Exchange ([right here](https://softwareengineering.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems))
+_source - Stack Exchange ([right here](https://softwareengineering.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems))_
 
 ### Contents:
 
