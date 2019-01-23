@@ -72,6 +72,10 @@ A wide variety of things, here's a list of most common applications:
 
 [Debuggex](https://www.debuggex.com/cheatsheet/regex/python) - FIlterable
 
+#### Tips and Tricks
+
+[Google Analytics](https://analytics.googleblog.com/2009/04/regular-expression-tips-and-tricks.html)
+
 #### JavaScript specific pages
 
 [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
