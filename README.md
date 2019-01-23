@@ -10,7 +10,13 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 ## 1. What is a Regular Expression
 
+**Short answer:** a RegEx is a string, which defines a search pattern. We can then search for the described pattern in other strings, bodies of text, what have you.
+
+**Long story:** RegExes are interpreted as being written in a language of their own, which allows for quite complex patterns to be defined. They are usually a combination of a pattern string and a set of flags, which define how the pattern should be interpreted. The patterns can range from simple wildcards to find strings of a given format within a text, or validate a format, to complex expression containing extractable groups, ranges, etc.
+
 ## 2. What is a RegEx good for
+
+
 ## 3. Fundamentals
 ## 4. Groups
 ## 5. Advanced topics
