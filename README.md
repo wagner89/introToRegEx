@@ -15,7 +15,10 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 ## 2. What is a RegEx good for
 
 A wide variety of things, here's a list of most common applications:
-
+ - validate string formats: email addresses, phone numbers, passwords, credic card numbers, what have you
+ - finding and replacing values in text to clean, reformat, or change content
+ - extracting parts from a text: value from an HTML/XML/JSON file, extensions/names of files, paragraphs
+ - parsing text files into values for import into a database, code input, etc
 
 ## 3. Fundamentals
 
