@@ -72,7 +72,9 @@ A wide variety of things, here's a list of most common applications:
 
 [Debuggex](https://www.debuggex.com/cheatsheet/regex/python) - FIlterable
 
-#### Tips and Tricks
+#### Tutorials, Tips and Tricks
+
+[GitHub RegEx intro](https://github.com/ziishaned/learn-regex)
 
 [Google Analytics](https://analytics.googleblog.com/2009/04/regular-expression-tips-and-tricks.html)
 
