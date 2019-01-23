@@ -14,6 +14,9 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 ## 2. What is a RegEx good for
 
+A wide variety of things, here's a list of most common applications:
+
+
 ## 3. Fundamentals
 
 ## 4. Groups
@@ -46,6 +49,7 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 ## 10. Resources
 
 #### Online RegEx testers:
+
 [RegEx 101](https://regex101.com/)
 
 #### Online RegEx testers:
@@ -57,6 +61,7 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 
 #### Cheat sheets
+
 [RegexEgg](https://www.rexegg.com/regex-quickstart.html) - long, distinguishes between environments
 
 [Cheatography](https://www.cheatography.com/davechild/cheat-sheets/regular-expressions/) - concise and nicely layed out
@@ -65,3 +70,10 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 [KeyCDN](https://www.keycdn.com/support/regex-cheatsheet)
 
+[Debuggex](https://www.debuggex.com/cheatsheet/regex/python) - FIlterable
+
+#### JavaScript specific pages
+
+[Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+[W3Schools](https://www.w3schools.com/jsref/jsref_obj_regexp.asp)
