@@ -6,8 +6,6 @@ Some people, when confronted with a problem, think
 ``` 
 _source - Stack Exchange ([right here](https://softwareengineering.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems))_
 
-### Contents:
-
 ## 1. What is a Regular Expression
 
 **Short answer:** a RegEx is a string, which defines a search pattern. We can then search for the described pattern in other strings, bodies of text, what have you.
