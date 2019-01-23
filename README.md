@@ -50,12 +50,18 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 #### Online RegEx testers:
 [RegEx 101](https://regex101.com/)
+
 [RegExer](https://regexr.com/)
+
 [RegEx Testing](https://regexr.com/)
+
 
 #### Cheat sheets
 [RegexEgg](https://www.rexegg.com/regex-quickstart.html) - long, distinguishes between environments
+
 [Cheatography](https://www.cheatography.com/davechild/cheat-sheets/regular-expressions/) - concise and nicely layed out
+
 [Printable PDF of the above](http://www.cbs.dtu.dk/courses/27610/regular-expressions-cheat-sheet-v2.pdf)
+
 [KeyCDN](https://www.keycdn.com/support/regex-cheatsheet)
 
