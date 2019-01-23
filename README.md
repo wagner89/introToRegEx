@@ -74,3 +74,7 @@ A wide variety of things, here's a list of most common applications:
 [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 [W3Schools](https://www.w3schools.com/jsref/jsref_obj_regexp.asp)
+
+#### Fun articles
+
+[Coding Horror](https://blog.codinghorror.com/regex-use-vs-regex-abuse/)
