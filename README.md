@@ -52,9 +52,6 @@ A wide variety of things, here's a list of most common applications:
 
 [RegEx 101](https://regex101.com/)
 
-#### Online RegEx testers:
-[RegEx 101](https://regex101.com/)
-
 [RegExer](https://regexr.com/)
 
 [RegEx Testing](https://regexr.com/)
