@@ -14,17 +14,17 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 ## 2. What is a RegEx good for
 
-
 ## 3. Fundamentals
+
 ## 4. Groups
+
 ## 5. Advanced topics
-## 6. Tips and tricks
-## 7. Resources
 
+## 6. JavaScript specifics
 
-## 8. When to use RegEx
+## 7. When to use RegEx
 
-## 9. When not to use RegEx
+## 8. When not to use RegEx
 
 ### a. When there is a more readable solution
   **Example: check if a string is lowercase**
@@ -41,3 +41,6 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
    **Example: check if a string is lowercase**
 
    `(x+x+)y+`
+   
+## 9. Tips and tricks
+## 10. Resources
