@@ -85,3 +85,5 @@ A wide variety of things, here's a list of most common applications:
 #### Fun articles
 
 [Coding Horror](https://blog.codinghorror.com/regex-use-vs-regex-abuse/)
+
+[relevant xkcd](https://xkcd.com/1313/)
