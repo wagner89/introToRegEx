@@ -22,9 +22,14 @@ A wide variety of things, here's a list of most common applications:
 
 ## 3. Fundamentals
 
-What is a match?
+Usual RegEx operations: test, match
+
+test() usually yields true if the string as a whole matches a RegEx pattern
+match() usually returns the first substring that matches the pattern, or an array with all matching substrings if /g is used
 
 Stop at first match vs. Global (/g)
+ - return the first match by default
+ - return all matches when the /g (global) flag is used
 
 Single line vs. Multi-line (/m)
 
