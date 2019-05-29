@@ -33,10 +33,12 @@ Single line vs. Multi-line (/m)
 #### Characters
 
 `.` - any character
+
 `\` - escape character (this means that '.' is \., and '\' is \\)
 
 
 `\d`, `\w`, `\s`
+
 `\D`, `\W`, `\S`
 
 digit, word, space
