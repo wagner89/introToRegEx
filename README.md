@@ -53,6 +53,21 @@ Single line vs. Multi-line (/m)
 
 ### Syntax
 
+First let's check out the possible flags:
+
+`g`	- Global search - all matches
+
+`i`	- Case-insensitive search
+
+`m`	- Multi-line search
+
+`s`	- Allows . to match newline characters
+
+`u`	- "unicode"; treat a pattern as a sequence of unicode code points
+
+`y`	- Perform a "sticky" search that matches starting at the current position in the target string.
+
+
 #### Characters
 
 `.` - any character
