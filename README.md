@@ -6,6 +6,8 @@ Some people, when confronted with a problem, think
 ``` 
 _source - Stack Exchange ([right here](https://softwareengineering.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems))_
 
+__Note: all examples of syntax are JavaScript based - check your language of choice for appropriate syntax__
+
 ## 1. What is a Regular Expression
 
 **Short answer:** a RegEx is a string, which defines a search pattern. We can then search for the described pattern in other strings, bodies of text, what have you.
@@ -22,14 +24,30 @@ A wide variety of things, here's a list of most common applications:
 
 ## 3. Fundamentals
 
-Usual RegEx operations: test, match
+A RegEx is actually a pattern and some flags (optional)
 
-test() usually yields true if the string as a whole matches a RegEx pattern
-match() usually returns the first substring that matches the pattern, or an array with all matching substrings if /g is used
+In JS this looks like:
 
-Stop at first match vs. Global (/g)
- - return the first match by default
- - return all matches when the /g (global) flag is used
+`regexp = new RegExp("pattern", "flags");` - init using constructor
+
+`regexp = /pattern/; // no flags` 
+`regexp = /pattern/gm; // with flags g,m` - init using `/` (like `'` and `"` for strings)
+
+RegEx operations in JS:
+
+`exec`	- search for a match in a string - returns array or `null`
+
+`test`	- tests for a match in a string, true if the string matches, false otherwise
+
+`match`	- searches for a match in a string - returns array or `null`
+
+`matchAll`	- returns an iterator containing all of the matches, including capturing groups
+
+`search`	- tests for a match in a string, returning the index of the match, or -1 if the search fails
+
+`replace`	- search for a match in a string, and replaces the matched substring with a replacement substring
+
+`split` -	break a string into an array of substrings
 
 Single line vs. Multi-line (/m)
 
