@@ -22,6 +22,28 @@ A wide variety of things, here's a list of most common applications:
 
 ## 3. Fundamentals
 
+What is a match?
+
+Stop at first match vs. Global (/g)
+
+Single line vs. Multi-line (/m)
+
+### Syntax
+
+#### Characters
+
+`.` - any character
+`\` - escape character (this means that '.' is \., and '\' is \\)
+
+
+`\d`, `\w`, `\s`
+`\D`, `\W`, `\S`
+
+digit, word, space
+not digit, word space
+
+
+
 ## 4. Groups
 
 ## 5. Advanced topics
