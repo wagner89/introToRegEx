@@ -76,9 +76,9 @@ First let's check out the possible flags:
 `\` - escape character (this means that `.` is `\.`, and `\` is `\\`)
 
 
-`\d`, `\w`, `\s` - digit, word, space
+`\d`, `\w`, `\s` - digit, 'word character' (`a-Z0-9_`), space
 
-`\D`, `\W`, `\S` - not digit, word space
+`\D`, `\W`, `\S` - NOT digit, word character, space
 
 
 
