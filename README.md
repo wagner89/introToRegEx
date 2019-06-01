@@ -71,7 +71,7 @@ First let's check out the possible flags:
 
 #### Characters
 
-Literal characters vs metacharacters vs shorthands
+They can be literal, meta, shorthand, non-printable
 
 - **literal characters** are like `f`, `Q`, `9`, `#` - they represent themselves
 - **metacharacters** have special meanings, and are (in most flavors) the following:
@@ -108,7 +108,19 @@ Literal characters vs metacharacters vs shorthands
 
 `\D`, `\W`, `\S` - NOT digit, word character, space
 
+- **non printable characters** (the most common ones)
 
+`\n` - LF (line feed) character
+
+`\r` - CR (carrige return) character
+
+`\t` - tab
+
+`\R` - any line break - LF, CR, LF and CR, vertical tab, unicode newline
+
+`\0` - null character
+
+`\xFF` - hexadecimal, where F is [0-9A-F]
 
 
 ## 4. Groups
