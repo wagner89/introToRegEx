@@ -75,12 +75,10 @@ First let's check out the possible flags:
 `\` - escape character (this means that '.' is \., and '\\' is \\\\)
 
 
-`\d`, `\w`, `\s`
+`\d`, `\w`, `\s` - digit, word, space
 
-`\D`, `\W`, `\S`
+`\D`, `\W`, `\S` - not digit, word space
 
-digit, word, space
-not digit, word space
 
 
 
