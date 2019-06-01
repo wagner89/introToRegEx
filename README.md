@@ -71,10 +71,38 @@ First let's check out the possible flags:
 
 #### Characters
 
+Literal characters vs metacharacters vs shorthands
+
+- **literal characters** are like `f`, `Q`, `9`, `#` - they represent themselves
+- **metacharacters** have special meanings, and are (in most flavors) the following:
+
+`\`, `^`, `$`, `.`, `|`, `?`, `*`, `+`, `(`, `)`, `[`, `{`
+
+`\` - escape character - treat following metacharacter as literal (`.` is `\.`, and `\` is `\\`)
+
+`^` - start of a line
+
+`$` - end of a line
+
 `.` - any character
 
-`\` - escape character (this means that `.` is `\.`, and `\` is `\\`)
+`|` - alternation - basically a boolean OR
 
+`?` - optional operator (quantifier matching 0 or 1)
+
+`*` - quantifier matching 0 or more times
+
+`+` - quantifier matching 1 or more times
+
+`()` - character group - all characters from the set must match, in order
+
+`[]` - character set - one character from the set must match, no ordering
+
+`{n}` - the previous character or character group `n times`,
+
+`{n,m}` - the previous character or character group `at least n, at most m times`,
+
+- **shorthand character classes**
 
 `\d`, `\w`, `\s` - digit, 'word character' (`a-Z0-9_`), space
 
