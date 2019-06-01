@@ -72,7 +72,7 @@ First let's check out the possible flags:
 
 `.` - any character
 
-`\` - escape character (this means that '.' is \., and '\' is \\)
+`\` - escape character (this means that '.' is \., and '\\' is \\\\)
 
 
 `\d`, `\w`, `\s`
