@@ -31,6 +31,7 @@ In JS this looks like:
 `regexp = new RegExp("pattern", "flags");` - init using constructor
 
 `regexp = /pattern/; // no flags` 
+
 `regexp = /pattern/gm; // with flags g,m` - init using `/` (like `'` and `"` for strings)
 
 RegEx operations in JS:
