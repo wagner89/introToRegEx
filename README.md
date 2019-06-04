@@ -108,7 +108,9 @@ They can be literal, meta, shorthand, non-printable
 
 `{n}` - the previous character or character group `n times`,
 
-`{n,m}` - the previous character or character group `at least n, at most m times`,
+`{n,m}` - the previous character or character group `at least n, at most m times`
+
+https://imgs.xkcd.com/comics/backslashes_2x.png
 
 - **shorthand character classes**
 
