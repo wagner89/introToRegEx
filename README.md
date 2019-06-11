@@ -155,12 +155,20 @@ Both return arrays: \[ entireMatch | groups\]
 
 Example:
 `/([M|m]rs*) (\w+) (\w+)/` applied to `mr. James Hetfield` returns ["mr. James Hetfield", "mr", "James", "hetfield"]
-`"Mr James Hetfield".match(/[M|m]rs* (\w+) \w+/)[1]` will result in "James", extracting the only capturing group 
+`'Mr James Hetfield'.match(/[M|m]rs* (\w+) \w+/)[1]` will result in "James", extracting the only capturing group 
 `(?: )` - this is a non-capturing group, backslash reference numbers are skipped
+
+A group matched multiple times keeps the last match in the result.
+
+Example:
+`'acbd'.match(/(\w)+/)` will return ["abcd", "d"]
+
+Named capturing groups produce an object along with the array, like so:
+`/[M|m]rs* (<firstname>\w+) \w+/` applied to `mr. James Hetfield` returns { 0: "mr. James Hetfield", 1: "James", groups: { firstname: "James" }, ... }
 
 Lookaround (lookahead and lookbehind)
 
-Also a non-capturing groups, backslash reference numbers are skipped for all lookarounds.
+Also non-capturing groups, backslash reference numbers are skipped for all lookarounds.
 
 Lookahead
 
@@ -188,19 +196,15 @@ Example:
 
 Lookaround expressions can contain any regex without additional lookarounds. Capturing groups work, and can be referenced outside as well.
 
-## 5. Advanced topics
+## 5. JavaScript specifics
 
 
 
-## 6. JavaScript specifics
+## 6. When to use RegEx
 
 
 
-## 7. When to use RegEx
-
-
-
-## 8. When not to use RegEx
+## 7. When not to use RegEx
 
 
 
@@ -220,10 +224,19 @@ Lookaround expressions can contain any regex without additional lookarounds. Cap
 
    `(x+x+)y+`
    
-## 9. Tips and tricks
+## 8. Tips and tricks
+
+**Behold the power of recursion***
+(x+x+)+y
+
+`xxxxxxxxxxy`
+`xxxxxxxxxx`
+`xxxxxxxxxxxxxxxxx`
+
+```If you try this regex on a 10x string in RegexBuddy's debugger, it'll take 2558 steps to figure out the final y is missing. For an 11x string, it needs 5118 steps. For 12, it takes 10238 steps. Clearly we have an exponential complexity of O(2^n) here. At 21x the debugger bows out at 2.8 million steps, diagnosing a bad case of catastrophic backtracking.```
 
 
-## 10. Resources
+## 9. Resources
 
 
 
