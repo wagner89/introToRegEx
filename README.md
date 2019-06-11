@@ -199,16 +199,13 @@ Lookaround expressions can contain any regex without additional lookarounds. Cap
 ## 5. JavaScript specifics
 
 
-
 ## 6. When to use RegEx
 
 
 
-## 7. When not to use RegEx
+## 7. When NOT to use a RegEx
 
-
-
-### a. When there is a more readable solution
+### When there is a more readable solution
   **Example: check if a string is lowercase**
 
    `var isLowercase = myString === myString.toLowerCase();`
@@ -219,15 +216,16 @@ Lookaround expressions can contain any regex without additional lookarounds. Cap
 
    `var isLowercase = /^[a-z]*$/.test(myString);`
      
-### b. When the regular expression is costly
-   **Example: check if a string is lowercase**
+### When the regular expression is costly
 
-   `(x+x+)y+`
+ Parsing, tokenization, for example - always use specialized tools for concrete taasks when they exist, regex should practically be trivial.
    
-## 8. Tips and tricks
+## 8. Good to know things
 
-**Behold the power of recursion***
-(x+x+)+y
+**Always be careful when using nested quantifiers or alternations***
+
+They most likely can result in catastrophic backtracking (unless everything is mutually exclusive)/
+`(x+x+)+y`
 
 `xxxxxxxxxxy`
 `xxxxxxxxxx`
@@ -237,9 +235,6 @@ Lookaround expressions can contain any regex without additional lookarounds. Cap
 
 
 ## 9. Resources
-
-
-
 
 #### Online RegEx testers:
 
@@ -281,3 +276,5 @@ Lookaround expressions can contain any regex without additional lookarounds. Cap
 [Coding Horror](https://blog.codinghorror.com/regex-use-vs-regex-abuse/)
 
 [relevant xkcd](https://xkcd.com/1313/)
+
+[awesome loggly article](https://www.loggly.com/blog/regexes-the-bad-better-best/)
