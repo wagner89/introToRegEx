@@ -92,7 +92,7 @@ They can be literal, meta, shorthand, non-printable
 
 `$` - end of a line
 
-`.` - any character
+`.` - any character except new line
 
 `|` - alternation - basically a boolean OR
 
@@ -118,6 +118,8 @@ https://imgs.xkcd.com/comics/backslashes_2x.png
 
 `\D`, `\W`, `\S` - NOT digit, word character, space
 
+`\b`, `\B` - anchors for word boundaries
+
 - **non printable characters** (the most common ones)
 
 `\n` - LF (line feed) character
@@ -135,13 +137,67 @@ https://imgs.xkcd.com/comics/backslashes_2x.png
 
 ## 4. Groups
 
+`(` `)` - can be used to create (capturing) groups
+
+`\1`, `\2` ... - can be used to reference groups
+
+`(ha)\1` - this matches `haha` from `hahaha` 
+`([a-z])_\1` - this matches `a_a`, but not `b_b`
+
+A reference to a capturing group doens't repeat the rule, but the exact match it captured.
+
+To get access to it's contents in JS, we can use
+
+String.match(RegExp)
+RegExp.exec(String)
+
+`(?: )` - this is a non-capturing group, backslash reference numbers are skipped
+
+Lookaround (lookahead and lookbehind)
+
+Also a non-capturing groups, backslash reference numbers are skipped for all lookarounds.
+
+Lookahead
+
+`(?= )` - positive lookahead (something followed by something else)
+The group itself is not included in the match, it's there to define what should follow the previous rule
+
+Example: 
+
+`(?! )` - negative lookahead (something not followed by something else)
+The group itself is not included in the match, it's there to define what should not follow the previous rule
+
+Example: 
+
+Lookbehind
+
+`(?<= )` - positive lookbehind (something preceded by something else)
+The group itself is not included in the match, it's there to define what should follow the previous rule
+
+Example: 
+
+`(?<! )` - negative lookbehind (something not preceded by something else)
+The group itself is not included in the match, it's there to define what should not follow the previous rule
+
+Example: 
+
+Lookaround expressions can contain any regex without additional lookarounds. Capturing groups work, and can be referenced outside as well.
+
 ## 5. Advanced topics
+
+
 
 ## 6. JavaScript specifics
 
+
+
 ## 7. When to use RegEx
 
+
+
 ## 8. When not to use RegEx
+
+
 
 ### a. When there is a more readable solution
   **Example: check if a string is lowercase**
@@ -160,7 +216,12 @@ https://imgs.xkcd.com/comics/backslashes_2x.png
    `(x+x+)y+`
    
 ## 9. Tips and tricks
+
+
 ## 10. Resources
+
+
+
 
 #### Online RegEx testers:
 
@@ -194,6 +255,8 @@ https://imgs.xkcd.com/comics/backslashes_2x.png
 [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 [W3Schools](https://www.w3schools.com/jsref/jsref_obj_regexp.asp)
+
+[Nice summary / tutorial](https://flaviocopes.com/javascript-regular-expressions/)
 
 #### Fun articles
 
