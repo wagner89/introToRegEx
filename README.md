@@ -151,6 +151,11 @@ To get access to it's contents in JS, we can use
 String.match(RegExp)
 RegExp.exec(String)
 
+Both return arrays: \[ entireMatch | groups\]
+
+Example:
+`/([M|m]rs*) (\w+) (\w+)/` applied to `mr. James Hetfield` returns ["mr. James Hetfield", "mr", "James", "hetfield"]
+`"Mr James Hetfield".match(/[M|m]rs* (\w+) \w+/)[1]` will result in "James", extracting the only capturing group 
 `(?: )` - this is a non-capturing group, backslash reference numbers are skipped
 
 Lookaround (lookahead and lookbehind)
