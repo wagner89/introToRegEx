@@ -238,7 +238,7 @@ Example:
 `xxxxxxxxxx`
 `xxxxxxxxxxxxxxxxx`
 
-```If you try this regex on a 10x string in RegexBuddy's debugger, it'll take 2558 steps to figure out the final y is missing. For an 11x string, it needs 5118 steps. For 12, it takes 10238 steps. Clearly we have an exponential complexity of O(2^n) here. At 21x the debugger bows out at 2.8 million steps, diagnosing a bad case of catastrophic backtracking.``` [quoted from here](https://www.regular-expressions.info)
+```If you try this regex on a 10x string in RegexBuddy's debugger, it'll take 2558 steps to figure out the final y is missing. For an 11x string, it needs 5118 steps. For 12, it takes 10238 steps. Clearly we have an exponential complexity of O(2^n) here. At 21x the debugger bows out at 2.8 million steps, diagnosing a bad case of catastrophic backtracking.``` [quoted from here](https://www.regular-expressions.info/catastrophic.html)
 
 **RegEx is greedy by default**
 
@@ -255,6 +255,12 @@ Example:
 
 **Using non-capturing groups when the group is not required should yield better performance**
 
+**Using anchors whenever possible improves performance**
+
+`\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}` runs much slower than `^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}`
+
+**The more specific a RegEx, the more likely it's faster (rule of thumb: longer RegExes are quicker)**
+
 **When checking for matches that are one after another, without anythin in between, there is /y (sticky)**
 
 Example:
@@ -266,6 +272,13 @@ Example:
 3+2=3
 2x+3=8
 ```
+
+## Common pitfalls
+
+- `*` matches the null string, `(whateverYouWant)*` will match every line
+- forgetting `^` `$` when trying to match a whole line
+- missing `\` when looking for literals which are meta characters in RegEx 
+- 
 
 
 ## Resources
@@ -296,6 +309,8 @@ Example:
 [GitHub RegEx intro](https://github.com/ziishaned/learn-regex)
 
 [Google Analytics](https://analytics.googleblog.com/2009/04/regular-expression-tips-and-tricks.html)
+
+[Improve RegEx performace](https://www.loggly.com/blog/five-invaluable-techniques-to-improve-regex-performance/)
 
 #### JavaScript specific pages
 
