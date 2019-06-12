@@ -8,13 +8,13 @@ _source - Stack Exchange ([right here](https://softwareengineering.stackexchange
 
 __Note: all examples of syntax are JavaScript based - check your language of choice for appropriate syntax__
 
-## 1. What is a Regular Expression
+## What is a Regular Expression
 
 **Short answer:** a RegEx is a string, which defines a search pattern. We can then search for the described pattern in other strings, bodies of text, what have you.
 
 **Long story:** RegExes are interpreted as being written in a language of their own, which allows for quite complex patterns to be defined. They are usually a combination of a pattern string and a set of flags, which define how the pattern should be interpreted. The patterns can range from simple wildcards to find strings of a given format within a text, or validate a format, to complex expression containing extractable groups, ranges, etc.
 
-## 2. What is a RegEx good for
+## What is a RegEx good for
 
 A wide variety of things, here's a list of most common applications:
  - validate string formats: email addresses, phone numbers, passwords, credic card numbers, what have you
@@ -22,7 +22,7 @@ A wide variety of things, here's a list of most common applications:
  - extracting parts from a text: value from an HTML/XML/JSON file, extensions/names of files, paragraphs
  - parsing text files into values for import into a database, code input, etc
 
-## 3. Fundamentals
+## Fundamentals
 
 A RegEx is actually a pattern and some flags (optional)
 
@@ -68,7 +68,7 @@ First let's check out the possible flags:
 
 `i`	- Case-insensitive search
 
-`m`	- Multi-line search
+`m`	- Multi-line search (changes `^` and `$` from start/end of string, to start/end of line)
 
 `s`	- Allows . to match newline characters
 
@@ -135,7 +135,7 @@ https://imgs.xkcd.com/comics/backslashes_2x.png
 `\xFF` - hexadecimal, where F is [0-9A-F]
 
 
-## 4. Groups
+## Groups
 
 `(` `)` - can be used to create (capturing) groups
 
@@ -175,35 +175,43 @@ Lookahead
 `(?= )` - positive lookahead (something followed by something else)
 The group itself is not included in the match, it's there to define what should follow the previous rule
 
-Example: 
+Example: `^Mircea(?= [P|c])`
 
 `(?! )` - negative lookahead (something not followed by something else)
 The group itself is not included in the match, it's there to define what should not follow the previous rule
 
-Example: 
+Example: `^Mircea(?! [P|c])`
+
+```
+Mircea Pîrv
+Mircea Lazar
+Mircea cel Bătrân
+```
 
 Lookbehind
 
 `(?<= )` - positive lookbehind (something preceded by something else)
 The group itself is not included in the match, it's there to define what should follow the previous rule
 
-Example: 
+Example: `(?<=(\w+ ){2})Terrier`
 
 `(?<! )` - negative lookbehind (something not preceded by something else)
 The group itself is not included in the match, it's there to define what should not follow the previous rule
 
-Example: 
+Example: `(?<!(\w+ ){2})Terrier`
+
+```
+Jack Russel Terrier
+Bitbull Terrier
+Scottish Terrier
+```
 
 Lookaround expressions can contain any regex without additional lookarounds. Capturing groups work, and can be referenced outside as well.
 
-## 5. JavaScript specifics
+## JavaScript specifics
 
 
-## 6. When to use RegEx
-
-
-
-## 7. When NOT to use a RegEx
+## When NOT to use a RegEx
 
 ### When there is a more readable solution
   **Example: check if a string is lowercase**
@@ -220,21 +228,32 @@ Lookaround expressions can contain any regex without additional lookarounds. Cap
 
  Parsing, tokenization, for example - always use specialized tools for concrete taasks when they exist, regex should practically be trivial.
    
-## 8. Good to know things
+## Good to know things
 
 **Always be careful when using nested quantifiers or alternations***
 
-They most likely can result in catastrophic backtracking (unless everything is mutually exclusive)/
+They most likely can result in catastrophic backtracking (unless everything is mutually exclusive)
+
+Example:
 `(x+x+)+y`
 
 `xxxxxxxxxxy`
 `xxxxxxxxxx`
 `xxxxxxxxxxxxxxxxx`
 
-```If you try this regex on a 10x string in RegexBuddy's debugger, it'll take 2558 steps to figure out the final y is missing. For an 11x string, it needs 5118 steps. For 12, it takes 10238 steps. Clearly we have an exponential complexity of O(2^n) here. At 21x the debugger bows out at 2.8 million steps, diagnosing a bad case of catastrophic backtracking.```
+```If you try this regex on a 10x string in RegexBuddy's debugger, it'll take 2558 steps to figure out the final y is missing. For an 11x string, it needs 5118 steps. For 12, it takes 10238 steps. Clearly we have an exponential complexity of O(2^n) here. At 21x the debugger bows out at 2.8 million steps, diagnosing a bad case of catastrophic backtracking.``` [quoted from here](https://www.regular-expressions.info)
+
+**RegEx is greedy by default**
+
+Quantifiers in a RegEx will always try to match as much as possible, unless followed by `?`, which in this case mark the group lazy - i.e. try to match as little as possible.
+
+Example:
+`<span>.*<\/span>` vs `<span>.*?<\/span>`
+
+`<span>This is the first span. We want only this.</span><span>Not this!</span>`
 
 
-## 9. Resources
+## Resources
 
 #### Online RegEx testers:
 
