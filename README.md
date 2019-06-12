@@ -166,11 +166,11 @@ Example:
 Named capturing groups produce an object along with the array, like so:
 `/[M|m]rs* (<firstname>\w+) \w+/` applied to `mr. James Hetfield` returns { 0: "mr. James Hetfield", 1: "James", groups: { firstname: "James" }, ... }
 
-Lookaround (lookahead and lookbehind)
+### Lookaround (lookahead and lookbehind)
 
 Also non-capturing groups, backslash reference numbers are skipped for all lookarounds.
 
-Lookahead
+#### Lookahead
 
 `(?= )` - positive lookahead (something followed by something else)
 The group itself is not included in the match, it's there to define what should follow the previous rule
@@ -188,7 +188,7 @@ Mircea Lazar
 Mircea cel Bătrân
 ```
 
-Lookbehind
+#### Lookbehind
 
 `(?<= )` - positive lookbehind (something preceded by something else)
 The group itself is not included in the match, it's there to define what should follow the previous rule
@@ -207,9 +207,6 @@ Scottish Terrier
 ```
 
 Lookaround expressions can contain any regex without additional lookarounds. Capturing groups work, and can be referenced outside as well.
-
-## JavaScript specifics
-
 
 ## When NOT to use a RegEx
 
@@ -255,6 +252,8 @@ Example:
 **Free spacing RegEx and comments**
 
 `/x` in some engines - doesn't work in ES6
+
+**Using non-capturing groups when the group is not required should yield better performance**
 
 ## Resources
 
