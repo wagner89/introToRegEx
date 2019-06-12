@@ -252,6 +252,9 @@ Example:
 
 `<span>This is the first span. We want only this.</span><span>Not this!</span>`
 
+**Free spacing RegEx and comments**
+
+`/x` in some engines - doesn't work in ES6
 
 ## Resources
 
