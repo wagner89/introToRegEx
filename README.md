@@ -255,6 +255,19 @@ Example:
 
 **Using non-capturing groups when the group is not required should yield better performance**
 
+**When checking for matches that are one after another, without anythin in between, there is /y (sticky)**
+
+Example:
+
+`[\d|+|-|=|\n]+` /gy
+
+```
+1+1=2
+3+2=3
+2x+3=8
+```
+
+
 ## Resources
 
 #### Online RegEx testers:
